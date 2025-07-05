@@ -7,8 +7,8 @@
 
 body {
   font-family: Arial, sans-serif;
-  /*background-color: #c3c3c3;*/
-  color: #222;
+  background-color: #f1f1f1;
+  color: #2c2c2c;
 }
 
 /* Navbar */
@@ -17,45 +17,42 @@ body {
   justify-content: center;
   align-items: center;
   padding: 15px 30px;
-  background-color: #f4f4f4; /* Matches your site background */
+  background-color: #e0e0e0;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-
-
 
 .ulist {
   list-style: none;
   display: flex;
   gap: 60px;
-  justify-content: center;
-  margin: 0;
-  padding: 0;
 }
 
 .a {
-  color: rgb(64, 61, 61);
+  color: #333;
   text-decoration: none;
   font-weight: bold;
   transition: 0.3s ease;
 }
 
 .a:hover {
+  color: #0077b6;
   text-decoration: underline;
 }
 
-/* Header Section */
+/* Header */
 .header {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 60px 20px;
-  background-color: #f5f5f5;
-  min-height: 80vh; /* Takes up most of the screen */
+  background-color: #232323;
+  min-height: 80vh;
   text-align: center;
 }
 
 .header-left {
   max-width: 700px;
+  color: #fff;
 }
 
 .header-left h2 {
@@ -66,51 +63,52 @@ body {
 .header-left h4 {
   font-size: 1.5rem;
   margin-bottom: 15px;
-  color: #555;
+  color: #ccc;
 }
 
 .header-left p {
   font-size: 1rem;
   line-height: 1.6;
-  color: #444;
   margin-bottom: 20px;
+  color: #bbb;
 }
 
-.btn {
+/* Buttons */
+.btn,
+.btnn,
+.contact-form button {
   padding: 10px 20px;
-  background-color: #222;
+  background-color: #0077b6;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
-  transition: 0.3s ease;
-  margin-bottom: 0px;
+  transition: background-color 0.3s ease;
 }
 
-.btn:hover {
-  background-color: #444;
+.btn:hover,
+.btnn:hover,
+.contact-form button:hover {
+  background-color: #0096c7;
 }
 
-.bt {
-margin: 0px;
-}
+/* Social Icons */
 .home-sci {
-  margin-top: 0px;
   display: flex;
-  margin-left: 0px;
   justify-content: center;
   gap: 20px;
-  background-color: #f5f5f5;
+  background-color: #232323;
+  margin-top: 0;
 }
 
 .home-sci a {
   font-size: 26px;
-  color: #333;
-  text-decoration: none;
+  color: #90e0ef;
+  transition: 0.3s ease;
 }
 
 .home-sci a:hover {
-  color: #000;
+  color: #00b4d8;
 }
 
 /* About Section */
@@ -118,27 +116,25 @@ margin: 0px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
-  text-align: center;
-  background-color: #f5f5f5;
+  padding: 60px 30px;
+  background-color: #232323;
 }
 
 .about-content {
+  background-color: #fff;
+  border: 1.5px solid #d9d9d9;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 30px;
   max-width: 700px;
-}
-.btnn {
-  padding: 10px 20px;
-  background-color: #222;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s ease;
+  text-align: center;
+  color: #2c2c2c;
 }
 
 .about-content h2 {
   font-size: 2.5rem;
   margin-bottom: 10px;
+  color: #003049;
 }
 
 .about-content h4 {
@@ -150,67 +146,50 @@ margin: 0px;
 .about-content p {
   font-size: 1rem;
   line-height: 1.6;
-  color: #444;
 }
 
+/* Projects */
 .projects-container {
   padding: 60px 30px;
-  justify-content: center;
   text-align: center;
-  background-color: #f5f5f5;
+  background-color: #232323;
 }
 
 .projects-container h2 {
   font-size: 2rem;
   margin-bottom: 40px;
+  color: #fff;
 }
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
-/* Ensures square cards */
 .project-card {
-  background-color: white;
-  aspect-ratio: 1 / 1; /* Makes it a perfect square */
-  border: 1px solid rgba(128, 128, 128, 0.3);
+  background-color: #fff;
+  border: 1.5px solid #d9d9d9;
   border-radius: 10px;
-  overflow: hidden;
+  padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #2c2c2c;
   transition: transform 0.2s ease;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 20px;
 }
 
 .project-card:hover {
   transform: translateY(-4px);
 }
 
-@media (min-width: 768px) {
-  .projects-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (min-width: 1024px) {
-  .projects-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-
-
 .project-card h3 {
   font-size: 1rem;
-  font-weight: 1000px;
   padding: 15px 5px 5px;
-  color: #222;
+  color: #003049;
 }
 
 .project-card p {
@@ -220,16 +199,29 @@ margin: 0px;
   line-height: 1.4;
 }
 
+/* Responsive Grid */
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
-
+/* Contact */
 .contact-container {
   padding: 60px 30px;
   text-align: center;
-  background-color: #f5f5f5;
+  background-color: #232323;
 }
 
-
-
+.contact-container h2 {
+  color: white;
+  margin-bottom: 10px;
+}
 .contact-form {
   max-width: 400px;
   margin: 0 auto;
@@ -240,25 +232,14 @@ margin: 0px;
 
 .contact-form input {
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #bbb;
   border-radius: 5px;
+  font-size: 1rem;
 }
 
-.contact-form button {
-  padding: 10px;
-  background-color: #222;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.contact-form button:hover {
-  background-color: #444;
-}
-
+/* Footer */
 .footer {
-  background-color: #ccc;
+  background-color: #e0e0e0;
   padding: 40px 20px;
   color: #333;
   font-family: Arial, sans-serif;
@@ -297,11 +278,11 @@ margin: 0px;
 
 .footer-section a {
   text-decoration: none;
-  color: #333;
 }
 
 .footer-section a:hover {
   text-decoration: underline;
+  color: #0096c7;
 }
 
 .footer-bottom {
@@ -310,3 +291,36 @@ margin: 0px;
   font-size: 0.9rem;
   color: #555;
 }
+
+/* Skills Section */
+.skills-section {
+  padding: 60px 30px;
+  background-color: #232323;
+  text-align: center;
+}
+
+.skills-section h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.skill-card {
+  background-color: #fff;
+  border: 1.5px solid #d9d9d9;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  font-weight: bold;
+  font-size: 1rem;
+  color: #2c2c2c;
+}
+
